@@ -1,0 +1,108 @@
+/* Estils globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #f4f4f9;
+  color: #333;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Contenidor principal */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Títols */
+h1, h2 {
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Enllaços de navegació */
+nav {
+  margin-bottom: 30px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 5px;
+}
+
+nav a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #2980b9;
+}
+
+/* Botons */
+button {
+  padding: 10px 20px;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #219150;
+}
+
+/* Resultats */
+.output {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #ecf0f1;
+  border-left: 4px solid #27ae60;
+  white-space: pre-wrap;
+  font-family: monospace;
+}
+
+/* Codis */
+code {
+  background-color: #e1e1e1;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.95em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}

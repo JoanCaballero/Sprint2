@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arrow function exercises</title>
     <link rel="stylesheet" href="../styles.css" />
-    <script type="module" src="./Ex1.js"></script>
+    <script type="module" src="./Ex2.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
@@ -14,77 +14,105 @@
     <script>hljs.highlightAll();</script>
   </head>
   <body>
-    <h1>Arrow Function</h1>
+    <h1>Operador Ternari</h1>
     <article>
-      <h2>Exercici 1.1</h2>
+      <h2>Exercici 2.1</h2>
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-            const add = (a, b) => { return a + b}
+          const potConduir = (age) => { age > 18 ? console.log('Pots conduir') : console.log('No pots conduir')}
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          const resultat = add(2, 5)
-          console.log(resultat)
+          potConduir(16)
+          potConduir(35)
         </code>
       </pre>
       <button id="exercici1-btn">Executar</button>
     </article>
 
     <article>
-      <h2>Exercici 1.2</h2>
+      <h2>Exercici 2.2</h2>
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-            const randomNumber = () => {return Math.floor(Math.random() * 101)}
+          const numGran = (number1, number2) => {
+            number1 > number2
+              ? console.log(`${number1} és més gran que ${number2}`)
+              : console.log(`${number2} és més gran que ${number1}`)
+          }
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          const resultat = randomNumber()
-          console.log(resultat)
+          numGran(7, 14)
+          numGran(49, 7)
         </code>
       </pre>
       <button id="exercici2-btn">Executar</button>
     </article>
 
     <article>
-      <h2>Exercici 1.3</h2>
+      <h2>Exercici 2.3.1</h2>
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-            class Person {
-              constructor(name) {
-                this.name = name
-              }
-
-              greet = () => {
-              console.log('Hello, ' + this.name)
-              }
-            }
+          const signeNum = (number) => {
+            number === 0
+              ? console.log(`El nombre ${number} és zero!`)
+              : number > 0
+              ? console.log(`El nombre ${number} és més gran que zero`)
+              : console.log(`El nombre ${number} és més petit que zero`)
+          }
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          const joan = new Person("Joan")
-          joan.greet()
+          signeNum(0)
+          signeNum(73)
+          signeNum(-37)
         </code>
       </pre>
-      <button id="exercici3-btn">Executar</button>
+      <button id="exercici31-btn">Executar</button>
     </article>
 
     <article>
-      <h2>Exercici 1.4</h2>
+      <h2>Exercici 2.3.2</h2>
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-          const printNumbers = (numbersArray = []) => {
-            for (let i = 0; i < numbersArray.length; i++) {
-              console.log(numbersArray[i])
+          const trobarMax = (a, b, c) => {
+            let numMax = undefined
+            a > b ? (numMax = a) : (numMax = b)
+            c > numMax ? (numMax = c) : (numMax = numMax)
+            console.log(numMax)
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          trobarMax(77, 7, -77)
+        </code>
+      </pre>
+      <button id="exercici32-btn">Executar</button>
+    </article>
+
+    <article>
+      <h2>Exercici 2.4</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const parOImpar = (nums = []) => {
+            for (let i = 0; i < numbers.length; i++) {
+              const message = `El valor a la posició ${i} de l'array és ${nums[i]}, és un nombre `
+              nums[i] % 2 == 0
+                ? console.log(message + 'parell')
+                : console.log(message + 'imparell')
             }
           }
         </code>
@@ -92,31 +120,10 @@
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          const numbers = [1, 2, 3, 4, 5]
-          printNumbers(numbers)
+          parOImpar([7, 72, 73, 37, 44])
         </code>
       </pre>
       <button id="exercici4-btn">Executar</button>
-    </article>
-
-    <article>
-      <h2>Exercici 1.5</h2>
-      <pre>
-        <h3>Declaració de la funció:</h3>
-        <code class="language-javascript">
-          const delayedMessage = (message) =>
-            setTimeout(() => {
-              console.log(message)
-            }, 3000)
-        </code>
-      </pre>
-      <pre>
-        <h3>Codi d'execució:</h3>
-        <code class="language-javascript">
-          delayedMessage("3 seconds later...")
-        </code>
-      </pre>
-      <button id="exercici5-btn">Executar</button>
     </article>
   </body>
 </html>

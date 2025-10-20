@@ -1,10 +1,10 @@
-// Exercise 1
+// Exercici 1
 const add = (a, b) => { return a + b}
 
-// Exercise 2
+// Exercici 2
 const randomNumber = () => {return Math.floor(Math.random() * 101)}
 
-// Exercise 3
+// Exercici 3
 class Person {
   constructor(name) {
     this.name = name
@@ -15,45 +15,45 @@ class Person {
   }
 }
 
-// Exercise 4
+// Exercici 4
 const printNumbers = (numbersArray = []) => {
   for (let i = 0; i < numbersArray.length; i++) {
     console.log(numbersArray[i])
   }
 }
 
-// Exercise 5
+// Exercici 5
 const delayedMessage = (message) =>
   setTimeout(() => {
     console.log(message)
   }, 3000)
 
-// HTML interactions
-const exercise1Btn = document.getElementById('exercise1-btn')
-exercise1Btn.addEventListener('click', (e) => {
-  const result = add(2, 5)
-  console.log(result)
+// HTML
+const exercici1Btn = document.getElementById('exercici1-btn')
+exercici1Btn.addEventListener('click', (e) => {
+  const resultat = add(2, 5)
+  console.log(resultat)
 })
 
-const exercise2Btn = document.getElementById('exercise2-btn')
-exercise2Btn.addEventListener('click', (e) => {
-  const result = randomNumber()
-  console.log(result)
+const exercici2Btn = document.getElementById('exercici2-btn')
+exercici2Btn.addEventListener('click', (e) => {
+  const resultat = randomNumber()
+  console.log(resultat)
 })
 
-const exercise3Btn = document.getElementById('exercise3-btn')
-exercise3Btn.addEventListener('click', (e) => {
-  const manolo = new Person('Manolo')
-  manolo.greet()
+const exercici3Btn = document.getElementById('exercici3-btn')
+exercici3Btn.addEventListener('click', (e) => {
+  const joan = new Person('Joan')
+  joan.greet()
 })
 
-const exercise4Btn = document.getElementById('exercise4-btn')
-exercise4Btn.addEventListener('click', (e) => {
+const exercici4Btn = document.getElementById('exercici4-btn')
+exercici4Btn.addEventListener('click', (e) => {
   const numbers = [1, 2, 3, 4, 5]
   printNumbers(numbers)
 })
 
-const exercise5Btn = document.getElementById('exercise5-btn')
-exercise5Btn.addEventListener('click', (e) => {
-  delayedMessage("Let's do this!")
+const exercici5Btn = document.getElementById('exercici5-btn')
+exercici5Btn.addEventListener('click', (e) => {
+  delayedMessage("3 seconds later...")
 })
