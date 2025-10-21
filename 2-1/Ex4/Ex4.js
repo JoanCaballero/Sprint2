@@ -50,7 +50,7 @@ addEventListenerClickToElement(exercici1Btn, () => console.log(array))
 const exercici2Btn = document.getElementById('exercici2-btn')
 addEventListenerClickToElement(exercici2Btn, () => {
   const nums = [1, 2, 3, 4, 5]
-  console.log(add(...nums))
+  console.log(suma(...nums))
 })
 
 const exercici3Btn = document.getElementById('exercici3-btn')
@@ -68,7 +68,7 @@ addEventListenerClickToElement(exercici4Btn, () => {
 
 const exercici5Btn = document.getElementById('exercici5-btn')
 addEventListenerClickToElement(exercici5Btn, () =>{
-  const tresNums = [1, 3, 4]
+  const tresNums = [2, 3, 4]
   console.log(multiplicar3Nums(...tresNums))
 })
 
