@@ -16,20 +16,121 @@
   <body>
     <h1>Promises & Async/Await</h1>
     <article>
-      <h2>Exercici 7.1</h2>
+      <h2>Exercici 7.1 i 7.2</h2>
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-          
+          const promesaHolaMon = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('Hola, món!');
+            }, 2000);
+          });
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          
+          promesaHolaMon.then(missatge => console.log(missatge))
         </code>
       </pre>
       <button id="exercise-btn">Executar</button>
+    </article>
+
+    <article>
+      <h2>Exercici 7.3</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const promesaHola =(missatge) => {
+            return new Promise((resolve, reject) => {
+                if (missatge === 'Hola') {
+                    resolve(missatge + ', món!');
+                } else {
+                    reject('Missatge no reconegut');
+                }
+            }, 2000);
+          } 
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          promesaHola('Adeu').then(missatge => console.log(missatge));
+          promesaHola('Hola').then(missatge => console.log(missatge));
+        </code>
+      </pre>
+      <button id="exercici3-btn">Executar</button>
+    </article>
+
+    <article>
+      <h2>Exercici 7.4</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const mostraSalutacio = async () => {
+            const resultat = await promesaHolaMon;
+            console.log(resultat);
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          mostraSalutacio()
+        </code>
+      </pre>
+      <button id="exercici4-btn">Executar</button>
+    </article>
+
+    <article>
+      <h2>Exercici 7.5</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const imprimirSalutacioTryCatch = async () => {
+            try {
+                const missatge = await promesaHolaMon;
+                console.log(missatge);
+            } catch (error) {
+                console.error(error);
+            }
+          }
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          imprimirSalutacioTryCatch()
+        </code>
+      </pre>
+      <button id="exercici5-btn">Executar</button>
+    </article>
+
+    <article>
+      <h2>Exercici 7.6</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const promesa1 = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('Primera promesa resolta');
+            }, 2000);
+          })
+
+          const promesa2 = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve('Segona promesa resolta');
+            }, 3000);
+          })
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          Promise.all([promesa1, promesa2]).then((resultats) => console.log(resultats))
+        </code>
+      </pre>
+      <button id="exercici6-btn">Executar</button>
     </article>
   </body>
 </html>
