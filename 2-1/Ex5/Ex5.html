@@ -6,24 +6,121 @@
     <title>Arrow function exercises</title>
     <link rel="stylesheet" href="../styles.css" />
     <script type="module" src="./Ex5.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
   </head>
   <body>
-    <h1>--------------------</h1>
+    <h1>Array Transforations</h1>
     <article>
-      <h2>Exercici 1.5</h2>
+      <h2>Exercici 5.1</h2>
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-            ----------------------
+          const nums = [1, 2, 3, 4]
+          const quadratNums = nums.map(num => num * num)
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          -----------------------------
+          console.log(quadratNums)
         </code>
       </pre>
       <button id="exercise-btn">Execute</button>
+    </article>
+
+    <article>
+      <h2>Exercici 5.2</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const numsParells = nums.filter(num => num % 2 === 0)
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          console.log(numsParells)
+        </code>
+      </pre>
+      <button id="exercici2-btn">Executar</button>
+    </article>
+
+    <article>
+      <h2>Exercici 5.3</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const nums2 = [1, 10, 8, 11]
+          const primerNumGran = nums2.find(num => num > 9)
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          console.log(primerNumGran)
+        </code>
+      </pre>
+      <button id="exercici3-btn">Executar</button>
+    </article>
+
+    <article>
+      <h2>Exercici 5.4</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const nums3 = [13, 7, 8, 21]
+          const sumaNums = nums3.reduce((acc, curr) => acc + curr, 0)
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          console.log(sumaNums)
+        </code>
+      </pre>
+      <button id="exercici4-btn">Executar</button>
+    </article>
+
+    <article>
+      <h2>Exercici 5.5</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const nums4 = [ 1, 3, 7, 10 ,15, 17, 11, 5, 8, 12, 9]
+          const filtratge = nums4.filter(num => num > 9).map(num => num * 2).reduce((acc, curr) => acc + curr, 0)
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          console.log(filtratge)
+        </code>
+      </pre>
+      <button id="exercici5-btn">Executar</button>
+    </article>
+
+    <article>
+      <h2>Exercici 5.6</h2>
+      <pre>
+        <h3>Declaració de la funció:</h3>
+        <code class="language-javascript">
+          const nums5 = [11, 12, 13, 14]
+          const totsGrans = nums5.every(num => num > 9)
+          const algunGran = nums5.some(num => num > 9)
+        </code>
+      </pre>
+      <pre>
+        <h3>Codi d'execució:</h3>
+        <code class="language-javascript">
+          console.log(totsGrans, algunGran)
+        </code>
+      </pre>
+      <button id="exercici6-btn">Executar</button>
     </article>
   </body>
 </html>

@@ -29,23 +29,22 @@ const processarCadena = (paraula, callback) => {
 const ensenyarParaula = (word) => { console.log(`La paraula en majúscules: ${word}`)}
 
 // HTML
+const addEventListenerClickToElement = (element, callback) => {
+  element.addEventListener('click', callback)
+}
+
 const exercici2Btn = document.getElementById('exercici2-btn')
-exercici2Btn.addEventListener('click', (e) => {
-  const resultat = calculadora(2, 5, add)
-  console.log(resultat)
+addEventListenerClickToElement(exercici2Btn, () => {
+const resultat = calculadora(2, 5, add)
+console.log(resultat)  
 })
 
 const exercici3Btn = document.getElementById('exercici3-btn')
-exercici3Btn.addEventListener('click', (e) => {
-  esperarISaludar('Joan', saluda)
-})
+addEventListenerClickToElement(exercici3Btn, () => esperarISaludar('Joan', saluda))
+
 
 const exercici4Btn = document.getElementById('exercici4-btn')
-exercici4Btn.addEventListener('click', (e) => {
-  processarElements([2, 4, 6, 8], seguirArray)
-})
+addEventListenerClickToElement(exercici4Btn, () =>processarElements([2, 4, 6, 8], seguirArray))
 
 const exercici5Btn = document.getElementById('exercici5-btn')
-exercici5Btn.addEventListener('click', (e) => {
-  processarCadena('paraula', ensenyarParaula)
-})
+addEventListenerClickToElement(exercici5Btn, () => processarCadena('paraula', ensenyarParaula))

@@ -1,5 +1,5 @@
 // Exercici 1
-const array1 = [1, 2, 3, 5, 8]
+const array1 = [1, 3, 5, 7, 9]
 const array2 = [2, 4, 6, 8, 10]
 const array = [...array1, ...array2]
 
@@ -26,55 +26,51 @@ const noms = ['Joan', 'Judit', 'Xavi', 'Manel', 'Pumba']
 const [nom1, nom2, ...altresNoms] = noms
 
 // Exercici 5
-const multiplicar3Nums = (a, b, c) => {
-  return a * b * c
-}
+const multiplicar3Nums = (a, b, c) => { return a * b * c}
 
 // Exercise 6
 const quadre = {
   nom: 'Nit estrellada',
   autor: 'Van Gogh',
 }
-
 const marc = {
   materialMarc: 'fusta de roure',
   colorMarc: 'marró',
 }
-
 const nitEstrellada = { ...quadre, ...marc }
 
 // HTML
-const exercise1Btn = document.getElementById('exercise1-btn')
-exercise1Btn.addEventListener('click', (e) => {
-  console.log(allNumbers)
+const addEventListenerClickToElement = (element, callback) => {
+  element.addEventListener('click', callback)
+}
+
+const exercici1Btn = document.getElementById('exercici1-btn')
+addEventListenerClickToElement(exercici1Btn, () => console.log(array))
+
+const exercici2Btn = document.getElementById('exercici2-btn')
+addEventListenerClickToElement(exercici2Btn, () => {
+  const nums = [1, 2, 3, 4, 5]
+  console.log(add(...nums))
 })
 
-const exercise2Btn = document.getElementById('exercise2-btn')
-exercise2Btn.addEventListener('click', (e) => {
-  const numbers = [1, 2, 3]
-  console.log(addition(...numbers))
+const exercici3Btn = document.getElementById('exercici3-btn')
+addEventListenerClickToElement(exercici3Btn, () => {
+  console.log(quadrat)
+  console.log(quadrat2)
 })
 
-const exercise3Btn = document.getElementById('exercise3-btn')
-exercise3Btn.addEventListener('click', (e) => {
-  console.log(fiatPanda2000)
-  console.log(fiatPanda2001)
+const exercici4Btn = document.getElementById('exercici4-btn')
+addEventListenerClickToElement(exercici4Btn, () => {
+  console.log(`Primer nom: ${nom1}`)
+  console.log(`Segon nom: ${nom2}`)
+  console.log(`Resta de noms: ${altresNoms}`)
 })
 
-const exercise4Btn = document.getElementById('exercise4-btn')
-exercise4Btn.addEventListener('click', (e) => {
-  console.log(`The first fruit is ${fruit1}`)
-  console.log(`The second fruit is ${fruit2}`)
-  console.log(`All the other fruits are ${allOtherFruits}`)
+const exercici5Btn = document.getElementById('exercici5-btn')
+addEventListenerClickToElement(exercici5Btn, () =>{
+  const tresNums = [1, 3, 4]
+  console.log(multiplicar3Nums(...tresNums))
 })
 
-const exercise5Btn = document.getElementById('exercise5-btn')
-exercise5Btn.addEventListener('click', (e) => {
-  const numbersToMultiply = [1, 3, 4]
-  console.log(multiply3Numbers(...numbersToMultiply))
-})
-
-const exercise6Btn = document.getElementById('exercise6-btn')
-exercise6Btn.addEventListener('click', (e) => {
-  console.log(stoneAxe)
-})
+const exercici6Btn = document.getElementById('exercici6-btn')
+addEventListenerClickToElement(exercici6Btn, () => console.log(nitEstrellada))
