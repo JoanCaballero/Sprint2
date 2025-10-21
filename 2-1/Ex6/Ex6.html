@@ -20,13 +20,16 @@
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-          
+          const noms = ['Anna', 'Bernat', 'Clara']
+          const imprimirNoms = (noms) => {
+            noms.forEach(nom => console.log(nom));
+          }
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          
+          imprimirNoms(noms)
         </code>
       </pre>
       <button id="exercise-btn">Executar</button>
@@ -37,13 +40,17 @@
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-          
+          const imprimirNomsForOf = (noms) => {
+            for (let nom of noms) {
+              console.log(nom);
+            }
+          }
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          
+          imprimirNomsForOf(noms)
         </code>
       </pre>
       <button id="exercici2-btn">Executar</button>
@@ -54,13 +61,14 @@
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-          
+          const numeros = [1, 2, 3, 4, 5, 6]
+          let numerosParells = numeros.filter(num => num % 2 === 0)
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          
+          console.log(numerosParells)
         </code>
       </pre>
       <button id="exercici3-btn">Executar</button>
@@ -71,13 +79,18 @@
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-          
+          const obj = {nom: 'Ona', edat: 25, ciutat: 'Barcelona'}
+          const imprimirObj = (obj) => {
+              for (let key in obj) {
+                  console.log(`${key}: ${obj[key]}`);
+              }
+          }
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          
+          imprimirObj(obj)
         </code>
       </pre>
       <button id="exercici4-btn">Executar</button>
@@ -88,13 +101,18 @@
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-          
+          const numsFinsA5 = (nums) => {
+            for (let num of nums) {
+                console.log(num);
+                if (num === 5) break;
+            }
+          }
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          
+          numsFinsA5(numeros)
         </code>
       </pre>
       <button id="exercici5-btn">Executar</button>
@@ -105,13 +123,19 @@
       <pre>
         <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-          
+          const imprimirNomsIPosicio = (noms) => {
+            let i = 0;
+            for (let nom of noms) {
+                console.log(`Posició ${i}: ${nom}`);
+                i++;
+            }
+          }
         </code>
       </pre>
       <pre>
         <h3>Codi d'execució:</h3>
         <code class="language-javascript">
-          
+          imprimirNomsIPosicio(noms)
         </code>
       </pre>
       <button id="exercici6-btn">Executar</button>
