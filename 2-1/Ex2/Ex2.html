@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arrow function exercises</title>
     <link rel="stylesheet" href="../styles.css" />
+    <script type="module" src="../common.js"></script>
     <script type="module" src="./Ex2.js"></script>
     <link
       rel="stylesheet"
@@ -14,17 +15,30 @@
     <script>hljs.highlightAll();</script>
   </head>
   <body>
-    <h1>Operador Ternari</h1>
-    <article>
+    <h1><a href="../index.html">Operador Ternari</a></h1>
+
+    <div class="exercici-buttons">
+      <button class="toggle-btn" data-target="ex1">Exercici 2.1</button>
+      <button class="toggle-btn" data-target="ex2">Exercici 2.2</button>
+      <button class="toggle-btn" data-target="ex3">Exercici 2.3.1</button>
+      <button class="toggle-btn" data-target="ex4">Exercici 2.3.2</button>
+      <button class="toggle-btn" data-target="ex5">Exercici 2.4</button>
+    </div>
+
+    <article id="ex1" class="exercici exercici-content active">
       <h2>Exercici 2.1</h2>
+      <h3>Declaració de la funció:</h3>
       <pre>
-        <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
-          const potConduir = (age) => { age > 18 ? console.log('Pots conduir') : console.log('No pots conduir')}
+          const potConduir = (age) => { 
+            age > 18 
+            ? console.log('Pots conduir') 
+            : console.log('No pots conduir')
+          }
         </code>
       </pre>
+      <h3>Codi d'execució:</h3>
       <pre>
-        <h3>Codi d'execució:</h3>
         <code class="language-javascript">
           potConduir(16)
           potConduir(35)
@@ -33,10 +47,10 @@
       <button id="exercici1-btn">Executar</button>
     </article>
 
-    <article>
+    <article id="ex2" class="exercici exercici-content">
       <h2>Exercici 2.2</h2>
+      <h3>Declaració de la funció:</h3>
       <pre>
-        <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
           const numGran = (number1, number2) => {
             number1 > number2
@@ -45,8 +59,8 @@
           }
         </code>
       </pre>
+      <h3>Codi d'execució:</h3>
       <pre>
-        <h3>Codi d'execució:</h3>
         <code class="language-javascript">
           numGran(7, 14)
           numGran(49, 7)
@@ -55,10 +69,10 @@
       <button id="exercici2-btn">Executar</button>
     </article>
 
-    <article>
+    <article id="ex3" class="exercici exercici-content">
       <h2>Exercici 2.3.1</h2>
+      <h3>Declaració de la funció:</h3>
       <pre>
-        <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
           const signeNum = (number) => {
             number === 0
@@ -69,8 +83,8 @@
           }
         </code>
       </pre>
+      <h3>Codi d'execució:</h3>
       <pre>
-        <h3>Codi d'execució:</h3>
         <code class="language-javascript">
           signeNum(0)
           signeNum(73)
@@ -80,10 +94,10 @@
       <button id="exercici31-btn">Executar</button>
     </article>
 
-    <article>
+    <article id="ex4" class="exercici exercici-content">
       <h2>Exercici 2.3.2</h2>
+      <h3>Declaració de la funció:</h3>
       <pre>
-        <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
           const trobarMax = (a, b, c) => {
             let numMax = undefined
@@ -93,8 +107,8 @@
           }
         </code>
       </pre>
+      <h3>Codi d'execució:</h3>
       <pre>
-        <h3>Codi d'execució:</h3>
         <code class="language-javascript">
           trobarMax(77, 7, -77)
         </code>
@@ -102,10 +116,10 @@
       <button id="exercici32-btn">Executar</button>
     </article>
 
-    <article>
+    <article id="ex5" class="exercici exercici-content">
       <h2>Exercici 2.4</h2>
+      <h3>Declaració de la funció:</h3>
       <pre>
-        <h3>Declaració de la funció:</h3>
         <code class="language-javascript">
           const parOImpar = (nums = []) => {
             for (let i = 0; i < numbers.length; i++) {
@@ -117,13 +131,18 @@
           }
         </code>
       </pre>
+      <h3>Codi d'execució:</h3>
       <pre>
-        <h3>Codi d'execució:</h3>
         <code class="language-javascript">
           parOImpar([7, 72, 73, 37, 44])
         </code>
       </pre>
       <button id="exercici4-btn">Executar</button>
     </article>
+
+    <section>
+      <h2>Sortida de consola</h2>
+      <div id="console-block" class="console-block"></div>
+    </section>
   </body>
 </html>
