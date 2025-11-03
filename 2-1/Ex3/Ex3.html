@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow function exercises</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <script type="module" src="../common.js"></script>
+    <script type="module" src="./Ex3.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </head>
+  <body>
+    <h1><a href="../index.html">Callbacks</a></h1>
+
+    <div class="exercici-buttons">
+      <button class="toggle-btn" data-target="ex1">Exercici 3.1</button>
+      <button class="toggle-btn" data-target="ex2">Exercici 3.2</button>
+      <button class="toggle-btn" data-target="ex3">Exercici 3.3</button>
+      <button class="toggle-btn" data-target="ex4">Exercici 3.4</button>
+      <button class="toggle-btn" data-target="ex5">Exercici 3.5</button>
+    </div>
+
+    <article id="ex1" class="exercici exercici-content active">
+      <h2>Exercici 3.1</h2>
+      <h3>Declaració de la funció:</h3>
+      <pre>
+        <code class="language-javascript">
+          const processar = (num, callback) => { callback(num)}
+        </code>
+      </pre>
+      <!-- No hi ha codi d'execució ni botó específic indicat -->
+    </article>
+
+    <article id="ex2" class="exercici exercici-content">
+      <h2>Exercici 3.2</h2>
+      <h3>Declaració de la funció:</h3>
+      <pre>
+        <code class="language-javascript">
+          const calculadora = (a, b, callback) => { return callback(a, b)}
+          const add = (a, b) => { return a + b} 
+        </code>
+      </pre>
+      <h3>Codi d'execució:</h3>
+      <pre>
+        <code class="language-javascript">
+          const resultat = calculadora(2, 5, add)
+          console.log(resultat)
+        </code>
+      </pre>
+      <button id="exercici2-btn">Executar</button>
+    </article>
+
+    <article id="ex3" class="exercici exercici-content">
+      <h2>Exercici 3.3</h2>
+      <h3>Declaració de la funció:</h3>
+      <pre>
+        <code class="language-javascript">
+          const esperarISaludar = (nom, callback) => {
+            setTimeout(() => {
+              callback(nom)
+            }, 2000)
+          }
+          const saluda = (name) => { console.log(`Hola ${name}`)}
+        </code>
+      </pre>
+      <h3>Codi d'execució:</h3>
+      <pre>
+        <code class="language-javascript">
+          esperarISaludar('Joan', saluda)
+        </code>
+      </pre>
+      <button id="exercici3-btn">Executar</button>
+    </article>
+
+    <article id="ex4" class="exercici exercici-content">
+      <h2>Exercici 3.4</h2>
+      <h3>Declaració de la funció:</h3>
+      <pre>
+        <code class="language-javascript">
+          const processarElements = (nums = [], callback) => {
+            nums.forEach((num) => {
+              callback(num)
+            })
+          }
+          const seguirArray = (num) => { console.log(`El teu nombre és ${num}`)}
+        </code>
+      </pre>
+      <h3>Codi d'execució:</h3>
+      <pre>
+        <code class="language-javascript">
+          processarElements([2, 4, 6, 8], seguirArray)
+        </code>
+      </pre>
+      <button id="exercici4-btn">Executar</button>
+    </article>
+
+    <article id="ex5" class="exercici exercici-content">
+      <h2>Exercici 3.5</h2>
+      <h3>Declaració de la funció:</h3>
+      <pre>
+        <code class="language-javascript">
+          const processarCadena = (paraula, callback) => {
+            const paraulaMaj = paraula.toUpperCase()
+            callback(paraulaMaj)
+          }
+          const ensenyarParaula = (word) => { console.log(`La paraula en majúscules: ${word}`)}
+        </code>
+      </pre>
+      <h3>Codi d'execució:</h3>
+      <pre>
+        <code class="language-javascript">
+          processarCadena('paraula', ensenyarParaula)
+        </code>
+      </pre>
+      <button id="exercici5-btn">Executar</button>
+    </article>
+
+    <section>
+      <h2>Sortida de consola</h2>
+      <div id="console-block" class="console-block"></div>
+    </section>
+  </body>
+</html>

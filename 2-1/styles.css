@@ -1,0 +1,170 @@
+/* Estils globals */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #10002b;
+  color: #e0aaff;
+  padding: 20px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* Contenidor principal */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+  background: #240046;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(155, 77, 255, 0.5);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 2rem;
+}
+
+.card {
+  background-color: #5a189a;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(155, 77, 255, 0.4);
+  color: #e0aaff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(199, 125, 255, 0.8);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #c77dff;
+}
+
+.cards-container > .card:last-child:nth-child(odd):nth-last-child(1) {
+  grid-column: 2 / 3; /* Centra la última card si és imparell */
+}
+
+/* Títols */
+h1, h2 {
+  color: #9d4edd;
+  margin: 15px 0 15px 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #c77dff;
+  margin-bottom: 10px;
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 a:hover {
+  color: #e0aaff;
+}
+
+/* Botons */
+button {
+  padding: 10px 20px;
+  background-color: #7b2cbf;
+  color: #e0aaff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #9d4edd;
+}
+
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #7b2cbf;
+  color: #e0aaff;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none; 
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+a.button:hover {
+  background-color: #9d4edd;
+}
+
+/* Resultats */
+.output {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #240046;
+  border-left: 4px solid #7b2cbf;
+  white-space: pre-wrap;
+  font-family: monospace;
+  color: #e0aaff;
+}
+
+/* Codis */
+code {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-family: monospace;
+  font-size: 0.95em;
+  width: 50vw;
+  margin: auto;
+  text-align: left;
+  display: block;
+}
+
+.exercici-content {
+  display: none;
+  margin-top: 1em;
+  transition: all 0.3s ease;
+}
+
+.exercici-content.active {
+  display: block;
+}
+
+.console-block {
+  background-color: white;
+  color: black;
+  font-family: monospace;
+  padding: 1rem;
+  border-radius: 5px;
+  min-height: 100px;
+  max-height: 250px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  margin-top: 1rem;
+  border: 1px solid #7b2cbf;
+  width: 50vw;
+  margin: auto;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
