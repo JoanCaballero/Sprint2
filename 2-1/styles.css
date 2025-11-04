@@ -161,6 +161,39 @@ code {
   margin: auto;
 }
 
+.sticky-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: #e0aaff;
+  border: #7b2cbf;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.sticky-button img {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.sticky-button:hover {
+  background-color: #3c096c;
+  transform: scale(1.2);
+}
+
+.sticky-button:hover img {
+  transform: scale(1.2);
+  filter: brightness(0) saturate(100%) invert(85%) sepia(17%) saturate(5629%) hue-rotate(203deg) brightness(100%) contrast(105%);
+}
+
 /* Responsive */
 @media (max-width: 600px) {
   nav ul {

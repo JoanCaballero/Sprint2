@@ -26,7 +26,7 @@ const trobarMax = (a, b, c) => {
 }
 
 // Exercici 4
-const  parOImpar= (nums = []) => {
+const parOImpar= (nums = []) => {
   for (let i = 0; i < nums.length; i++) {
     const message = `El valor a la posició ${i} de l'array és ${nums[i]}, és un nombre `
     nums[i] % 2 == 0
