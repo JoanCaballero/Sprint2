@@ -125,7 +125,6 @@ a.button:hover {
 
 /* Codis */
 code {
-  background-color: #240046;
   padding: 4px 8px;
   border-radius: 6px;
   font-family: monospace;
@@ -133,7 +132,6 @@ code {
   width: 50vw;
   margin: auto;
   text-align: left;
-  color: #e0aaff;
   display: block;
 }
 
@@ -148,8 +146,8 @@ code {
 }
 
 .console-block {
-  background-color: #3c096c;
-  color: #e0aaff;
+  background-color: white;
+  color: black;
   font-family: monospace;
   padding: 1rem;
   border-radius: 5px;
